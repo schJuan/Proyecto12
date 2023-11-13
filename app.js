@@ -7,7 +7,7 @@ btnCart.addEventListener('click', () => {
 	containerCartProducts.classList.toggle('hidden-card');
 });
 
-
+const carritoAprobado = document.querySelector(`.aprobado`)
 const cartInfo = document.querySelector('.cart-product');
 const rowProduct = document.querySelector('.row-product');
 
@@ -69,6 +69,19 @@ rowProduct.addEventListener('click', e => {
 
 		showHTML();
 	}
+});
+carritoAprobado.addEventListener('click', e => {
+    if (e.target.classList.contains('carrito')){
+        
+    }
+    Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Su compra fue realziada",
+        showConfirmButton: false,
+        timer: 1800
+        
+      });
 });
 
 
